@@ -1,0 +1,27 @@
+package site;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class siterunner {
+	
+	public static void main (String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.get("https://host.parknstays.com/#/login");
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div/div[2]/div[2]/span")).click();
+	    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div/div[2]/form/div[1]/div[1]/div[1]/div/input")).sendKeys("test");
+	    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div/div[2]/form/div[1]/div[2]/div[1]/div/input")).sendKeys("gotennisgt@gmail.com");
+	    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div/div[2]/form/div[1]/div[1]/div[2]/div/input")).sendKeys("Test@1234");
+	    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div/div[2]/form/div[1]/div[2]/div[2]/div/input")).sendKeys("Test@1234");
+	    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div/div[2]/form/div[1]/div[1]/div[3]/div/input")).sendKeys("1234567890");
+	    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div/div[2]/form/button")).click();
+		
+	}
+	
+
+}
